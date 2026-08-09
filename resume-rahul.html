@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Kumar Jha - Senior Technical Support Engineer | L2 Application Support | SQL | FinTech Banking Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Professional overrides ── */
+      body { background: #fff; }
+
+      .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        background: #fff;
+        border: 1px solid #d0d0d0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      /* Header — flat dark navy, no gradient */
+      .header {
+        background: #1a2332;
+        padding: 28px 36px;
+      }
+      .header h1 { font-size: 32px; letter-spacing: 1px; }
+      .header .subtitle { font-size: 15px; color: #c8cdd5; margin-bottom: 14px; }
+      .contact-item a, .contact-item span { color: #d0d5de; font-size: 13.5px; }
+      .contact-item i { color: #8a9bb0; }
+
+      /* Section titles — simple underline, no color */
+      .section-title {
+        color: #1a2332;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        border-bottom: 2px solid #1a2332;
+        padding-bottom: 5px;
+        margin-bottom: 14px;
+      }
+
+      /* Skill tags — plain border only */
+      .skill-tag {
+        background: #fff;
+        border: 1px solid #bbb;
+        color: #333;
+        font-size: 12.5px;
+        border-radius: 3px;
+      }
+      .skill-category-title.orange { color: #1a2332; font-size: 12.5px; }
+
+      /* Domain / competency items — no emoji clutter */
+      .domain-item { color: #444; font-size: 13px; padding: 3px 0; }
+
+      /* Experience cards — clean, no background fill */
+      .exp-card {
+        border-left: 3px solid #1a2332 !important;
+        background: #fafafa !important;
+        border-radius: 0 !important;
+        padding: 12px 14px !important;
+        margin-bottom: 14px !important;
+      }
+      .exp-role { color: #1a2332 !important; font-size: 14.5px !important; }
+      .exp-company { color: #444 !important; font-weight: 600 !important; font-size: 13px !important; }
+      .exp-duration, .exp-location { color: #666 !important; font-size: 12px !important; }
+      .exp-duration i, .exp-location i { color: #888 !important; }
+
+      /* Badges — flat, no color */
+      .exp-badge.project { background: #eee !important; color: #222 !important; border-radius: 3px !important; }
+      .exp-badge.client  { background: #e8e8e8 !important; color: #222 !important; border-radius: 3px !important; }
+      .exp-badge.tool    { background: #fff !important; color: #444 !important; border: 1px solid #ccc !important; border-radius: 3px !important; }
+
+      .exp-desc { color: #555 !important; font-size: 13px !important; }
+      .responsibilities li { color: #444; font-size: 13.5px; }
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+      .exp-title-block { display: flex; flex-direction: column; gap: 2px; }
+      .exp-meta-block  { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+      .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+      .exp-badge { font-size: 12px; padding: 3px 9px; font-weight: 500; }
+
+      /* Save button — flat dark */
+      .btn-download {
+        background: #1a2332 !important;
+        border-radius: 3px !important;
+        box-shadow: none !important;
+        font-size: 13px !important;
+      }
+      .btn-download:hover { background: #2c3e55 !important; transform: none !important; }
+
+      /* Education & section text */
+      .education-title, .institution, .gpa-info,
+      .education-duration, .education-location { color: #444; font-size: 13.5px; }
+      .section-content p { color: #444; font-size: 13.5px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Control Buttons -->
+    <div class="control-buttons">
+      <button class="btn btn-download" onclick="downloadPDF()">
+        <i class="fas fa-download"></i> Save as PDF
+      </button>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <div class="header-main">
+            <h1>RAHUL KUMAR JHA</h1>
+            <p class="subtitle">Senior Technical Support Engineer | L2 Application & Production Support</p>
+          </div>
+          <div class="contact-info">
+            <div class="contact-row">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email: </span>
+                <a href="mailto:rahulkumarjha093@gmail.com" target="_blank">rahulkumarjha093@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>Phone: </span>
+                <a href="tel:+918879257177" target="_blank">+91 8879257177</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-bolt"></i>
+                <span>Notice Period: </span>
+                <span>Immediate Joiner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Left Column -->
+        <div class="left-column">
+
+          <!-- Key Achievements -->
+          <section class="section">
+            <h2 class="section-title">KEY ACHIEVEMENTS</h2>
+            <div class="section-content">
+              <ul class="responsibilities">
+                <li>Maintained <strong>95%+</strong> SLA compliance consistently across <strong>150+</strong> monthly incidents in production support environments.</li>
+                <li>Reduced average incident resolution time by <strong>30%</strong> by building reusable SQL scripts and troubleshooting runbooks for recurring issues.</li>
+                <li>Automated <strong>10+</strong> recurring SQL reports using Python scripts, saving approximately <strong>5–6 hrs</strong> of manual effort per week.</li>
+                <li>Successfully supported <strong>3 DC-DR drill</strong> exercises with zero business continuity failures across banking and FinTech applications.</li>
+                <li>Resolved a critical data reconciliation issue at Cars24, preventing financial discrepancies affecting <strong>500+</strong> customer accounts.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Summary -->
+          <section class="section">
+            <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+            <div class="section-content">
+              <ul class="responsibilities">
+                <li>Overall <strong>6.8 years</strong> of experience in <strong>L2 Application Support</strong> and Production Support across <strong>FinTech, Banking, and Logistics</strong> domains.</li>
+                <li>Strong expertise in <strong>SQL, PL/SQL, Oracle, MS SQL Server</strong>, API testing using <strong>Postman</strong>, and monitoring via <strong>Grafana</strong> and <strong>Splunk</strong>.</li>
+                <li>Experienced in <strong>incident management</strong>, RCA, data validation, SLA compliance, and ticket management through <strong>ServiceNow, Zendesk, and Jira</strong>.</li>
+                <li>Hands-on with <strong>Linux/Unix</strong>, REST API troubleshooting, DC-DR drills, UAT deployments, and CI/CD pipelines in Agile environments.</li>
+                <li>Proficient in <strong>Python</strong> and AI tools for SQL automation, data analysis, and technical documentation.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Work Experience -->
+          <section class="section">
+            <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+
+            <!-- Cars24 -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-title-block">
+                  <span class="exp-role">Senior Technical Support Engineer</span>
+                  <span class="exp-company">Cars24 Financial Services Pvt. Ltd</span>
+                </div>
+                <div class="exp-meta-block">
+                  <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Dec 2024 – May 2026</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Gurgaon</span>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="exp-badge project">Project: Saarathi</span>
+                <span class="exp-badge tool">MySQL</span>
+                <span class="exp-badge tool">MongoDB</span>
+                <span class="exp-badge tool">Postman</span>
+                <span class="exp-badge tool">Zendesk</span>
+                <span class="exp-badge tool">Grafana</span>
+                <span class="exp-badge tool">Jira</span>
+              </div>
+              <ul class="responsibilities" style="margin-top: 10px;">
+                <li>Handled L2 production incidents for loan application workflows, performing root cause analysis and ensuring timely resolution within defined SLAs.</li>
+                <li>Investigated and resolved data discrepancies in customer lead and loan records using <strong>MySQL</strong> and <strong>MongoDB</strong> queries.</li>
+                <li>Validated API request/response payloads using <strong>Postman</strong> to troubleshoot integration failures between Saarathi and partner systems.</li>
+                <li>Monitored application health and tracked error trends using <strong>Grafana</strong> dashboards, proactively identifying issues before business impact.</li>
+                <li>Managed and tracked support tickets end-to-end through <strong>Zendesk</strong> and <strong>Jira</strong>, coordinating with development and product teams for fixes.</li>
+              </ul>
+            </div>
+
+            <!-- TCS / Nelito -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-title-block">
+                  <span class="exp-role">Senior Technical Support Engineer</span>
+                  <span class="exp-company">TCS &nbsp;·&nbsp; Nelito Systems Pvt. Ltd</span>
+                </div>
+                <div class="exp-meta-block">
+                  <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Feb 2024 – Sept 2024</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Bangalore</span>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="exp-badge project">Project: Netbanking &amp; Mobile Banking</span>
+                <span class="exp-badge client">Client: SBI</span>
+                <span class="exp-badge tool">Oracle</span>
+                <span class="exp-badge tool">Grafana</span>
+                <span class="exp-badge tool">ServiceNow</span>
+                <span class="exp-badge tool">Linux</span>
+              </div>
+              <ul class="responsibilities" style="margin-top: 10px;">
+                <li>Provided L2 production support for SBI Netbanking and Mobile Banking platform, resolving critical incidents within SLA timelines.</li>
+                <li>Investigated transaction failures and account-related issues by writing and executing complex <strong>Oracle SQL</strong> queries for data analysis and validation.</li>
+                <li>Monitored application performance and server health on <strong>Linux</strong> environments using <strong>Grafana</strong>, escalating anomalies to L3 teams promptly.</li>
+                <li>Managed incident lifecycle through <strong>ServiceNow</strong> — logging, prioritising, tracking, and closing tickets with proper RCA documentation.</li>
+                <li>Collaborated with development and QA teams to reproduce issues, validate fixes, and ensure stable deployments in the production environment.</li>
+              </ul>
+            </div>
+
+            <!-- Clover Infotech -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-title-block">
+                  <span class="exp-role">Technical Support Engineer</span>
+                  <span class="exp-company">Clover Infotech Pvt Ltd</span>
+                </div>
+                <div class="exp-meta-block">
+                  <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Jul 2022 – Sept 2023</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="exp-badge project">Project: Optimus (Website &amp; Mobile App)</span>
+                <span class="exp-badge client">Client: IDFC First Bank</span>
+                <span class="exp-badge tool">Oracle</span>
+                <span class="exp-badge tool">Grafana</span>
+                <span class="exp-badge tool">ServiceNow</span>
+              </div>
+              <ul class="responsibilities" style="margin-top: 10px;">
+                <li>Supported the Optimus banking platform (web and mobile) for IDFC First Bank, handling L2 incidents related to transactions, login failures, and data sync issues.</li>
+                <li>Performed data investigation and validation using <strong>Oracle SQL</strong> to identify root causes of customer-reported issues and data inconsistencies.</li>
+                <li>Monitored application and infrastructure metrics via <strong>Grafana</strong> to detect performance degradation and proactively raise alerts.</li>
+                <li>Raised, tracked, and resolved incidents and service requests through <strong>ServiceNow</strong>, ensuring SLA adherence and proper escalation when required.</li>
+                <li>Coordinated with the development team to test and verify production hotfixes, ensuring no regression before deployment.</li>
+              </ul>
+            </div>
+
+            <!-- Manipal Technologies -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-title-block">
+                  <span class="exp-role">Technical Support Executive</span>
+                  <span class="exp-company">Manipal Technologies Ltd</span>
+                </div>
+                <div class="exp-meta-block">
+                  <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Jan 2021 – Jul 2022</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="exp-badge project">Project: CFSMag 3.0</span>
+                <span class="exp-badge client">Client: CMA CGM Logistics Park, Greater Noida</span>
+                <span class="exp-badge tool">MS-SQL Server</span>
+                <span class="exp-badge tool">T-SQL</span>
+                <span class="exp-badge tool">HTML</span>
+                <span class="exp-badge tool">.NET</span>
+              </div>
+              <ul class="responsibilities" style="margin-top: 10px;">
+                <li>Designed and maintained <strong>MS SQL Server</strong> databases for the CFSMag CFS platform, ensuring stability, reliability, and optimal performance.</li>
+                <li>Developed, implemented, and optimized stored procedures, functions, and triggers using <strong>T-SQL</strong> to support business-critical logistics operations.</li>
+                <li>Handled end-to-end database operations including Monitoring, Backup, Restore, Deployment, and Change Management on the production environment.</li>
+                <li>Performed production support activities — defect analysis, data amendments, test script execution, and root cause reporting for CFS import/export workflows.</li>
+                <li>Supported EDI interface and warehouse management modules by troubleshooting data flow issues and validating transaction records in the database.</li>
+              </ul>
+
+            </div>
+
+            <!-- V & V Comptech -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-title-block">
+                  <span class="exp-role">Application Support Engineer</span>
+                  <span class="exp-company">V &amp; V Comptech Systems</span>
+                </div>
+                <div class="exp-meta-block">
+                  <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Aug 2018 – Jul 2020</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Navi Mumbai</span>
+                </div>
+              </div>
+              <ul class="responsibilities" style="margin-top: 10px;">
+                <li>Provided L1/L2 application support for enterprise clients, handling incident logging, triage, and resolution within defined SLA timelines.</li>
+                <li>Performed database queries using <strong>SQL</strong> to investigate data issues and support business operations.</li>
+                <li>Coordinated with internal teams to escalate unresolved issues and ensure timely closure of support tickets.</li>
+                <li>Assisted in UAT testing, deployment activities, and post-release monitoring for application updates.</li>
+                <li>Maintained support documentation including runbooks, FAQs, and incident reports for knowledge base management.</li>
+              </ul>
+            </div>
+
+          </section>
+
+
+          <!-- Education -->
+          <section class="section">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="education-line">
+              <div class="education-left">
+                <span class="education-title">Bachelor of Technology (Computer Science &amp; Engineering)</span>
+              </div>
+              <div class="education-right">
+                <span class="separator">|</span>
+                <span class="institution">Mahavir Institute of Engineering &amp; Technology, Bhubaneswar</span>
+                <span class="separator">|</span>
+                <span class="gpa-info">CGPA: 6.99</span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <!-- End Left Column -->
+
+        <!-- Right Column -->
+        <div class="right-column">
+
+          <!-- Technical Skills -->
+          <section class="section">
+            <h2 class="section-title">TECHNICAL SKILLS</h2>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">Programming</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">Database</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">MS SQL Server</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">PL/SQL</span>
+                <span class="skill-tag">Oracle</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">API &amp; Monitoring</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Grafana</span>
+                <span class="skill-tag">Splunk</span>
+                <span class="skill-tag">Dynatrace</span>
+                <span class="skill-tag">Datadog</span>
+                <span class="skill-tag">Autosys</span>
+                <span class="skill-tag">Crontab</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">Ticketing &amp; Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Zendesk</span>
+                <span class="skill-tag">ServiceNow</span>
+                <span class="skill-tag">Jira</span>
+                <span class="skill-tag">FLEXCUBE CBS</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">Cloud &amp; OS</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Windows</span>
+                <span class="skill-tag">Linux</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="skill-category-title orange">AI Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">ChatGPT</span>
+                <span class="skill-tag">Claude</span>
+                <span class="skill-tag">GitHub Copilot</span>
+                <span class="skill-tag">Gemini</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Domain Experience -->
+          <section class="section">
+            <h2 class="section-title">DOMAIN EXPERIENCE</h2>
+            <div class="domain-list">
+              <div class="domain-item">FinTech – Cars24 Financial Services</div>
+              <div class="domain-item">Banking – SBI (Netbanking &amp; Mobile)</div>
+              <div class="domain-item">Banking – IDFC First Bank</div>
+              <div class="domain-item">Logistics &amp; CFS – CMA CGM</div>
+              <div class="domain-item">Warehouse Management</div>
+            </div>
+          </section>
+
+          <!-- Key Competencies -->
+          <section class="section">
+            <h2 class="section-title">KEY COMPETENCIES</h2>
+            <div class="domain-list">
+              <div class="domain-item">L2 Application Support</div>
+              <div class="domain-item">Production Incident Management</div>
+              <div class="domain-item">Root Cause Analysis (RCA)</div>
+              <div class="domain-item">SLA Compliance</div>
+              <div class="domain-item">API Integration Troubleshooting</div>
+              <div class="domain-item">Data Validation &amp; Analysis</div>
+              <div class="domain-item">Agile / Scrum</div>
+            </div>
+          </section>
+
+          <!-- Languages -->
+          <section class="section">
+            <h2 class="section-title">LANGUAGES</h2>
+            <div class="domain-list">
+              <div class="domain-item">English &ndash; Professional Proficiency</div>
+              <div class="domain-item">Hindi &ndash; Native</div>
+            </div>
+          </section>
+
+        </div>
+        <!-- End Right Column -->
+
+      </div>
+    </div>
+
+    <script>
+      async function downloadPDF() {
+        const btn = document.querySelector('.btn-download');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+        btn.disabled = true;
+
+        try {
+          const { jsPDF } = window.jspdf;
+          const element = document.querySelector('.container');
+          const canvas = await html2canvas(element, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            backgroundColor: '#ffffff'
+          });
+
+          const imgData = canvas.toDataURL('image/jpeg', 0.95);
+          const pdf = new jsPDF('p', 'mm', 'a4');
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+          const imgWidth = canvas.width;
+          const imgHeight = canvas.height;
+          const ratio = pdfWidth / imgWidth;
+          const scaledHeight = imgHeight * ratio;
+
+          let position = 0;
+          let remainingHeight = scaledHeight;
+
+          while (remainingHeight > 0) {
+            pdf.addImage(imgData, 'JPEG', 0, position, pdfWidth, scaledHeight);
+            remainingHeight -= pdfHeight;
+            position -= pdfHeight;
+            if (remainingHeight > 0) pdf.addPage();
+          }
+
+          pdf.save('Rahul_Kumar_Jha_Resume.pdf');
+        } catch (err) {
+          alert('PDF generation failed. Please try again.');
+          console.error(err);
+        } finally {
+          btn.innerHTML = '<i class="fas fa-download"></i> Save as PDF';
+          btn.disabled = false;
+        }
+      }
+    </script>
+  </body>
+</html>
